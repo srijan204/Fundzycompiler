@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080a12">
+<meta name="description" content="Learn C and C++ by writing, compiling, and running code in your browser with Fundzy Compiler. Beginner-friendly examples and helpful success feedback.">
+<title>Fundzy Compiler — Online C &amp; C++ Compiler</title>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#"><span class="brand-mark">&lt;/&gt;</span><span>Fundzy<span class="gradient">Compiler</span></span></a>
+<nav class="nav"><a href="#home">Home</a><a href="#workspace">Compiler</a><a href="#learn">Learn</a><a href="#code-basics">Code basics</a><a href="#features">Features</a></nav>
+<button class="pill-button" id="theme" aria-label="Toggle light mode">☼</button><a class="pill-button start" href="#workspace" style="text-decoration:none">Get Started ↗</a>
+</header>
+<main id="home">
+<section class="hero"><p class="eyebrow">YOUR BROWSER. YOUR CODE.</p><h1>Code. Compile. <span class="gradient">Run.</span></h1><p>A calm, clean coding space for C, C++ and CSS.<br>No clutter. Just your ideas and a place to build them.</p><div class="chips"><span>⌘ C</span><span>＋ C++</span><span>◉ CSS Live Preview</span><span>✦ Free to use</span><span>↗ No personal server</span></div></section>
+<section class="workspace" id="workspace">
+<aside class="sidebar"><p class="section-label">LANGUAGE</p><button class="lang active" data-lang="c"><span class="lang-badge">C</span>C</button><button class="lang" data-lang="cpp"><span class="lang-badge">C++</span>C++</button><button class="lang" data-lang="css"><span class="lang-badge">◉</span>CSS Preview</button><div class="separator"></div><p class="section-label">QUICK EXAMPLES</p><button class="example active" data-example="hello">⌘ &nbsp; Hello World</button><button class="example" data-example="sum">⌘ &nbsp; Sum of Two Numbers</button><button class="example" data-example="factorial">⌘ &nbsp; Factorial</button><button class="example" data-example="fibonacci">⌘ &nbsp; Fibonacci</button><button class="example" data-example="prime">⌘ &nbsp; Prime Number</button><button class="newfile" id="newfile">＋ &nbsp; New File</button></aside>
+<div class="content"><div class="toolbar"><div class="filename" id="filename">main.c</div><button class="tool" id="clear">↻ Clear</button><button class="tool" id="download">↓ Download</button><button class="tool" id="fullscreen">⛶ Fullscreen</button><button class="run" id="run">▶ Run Code</button></div>
+<div class="grid"><section class="panel"><div class="panel-head"><span id="editor-label">C · main.c</span><span class="meta">CODE EDITOR</span></div><div class="editor" id="editor" aria-label="Code editor"></div></section>
+<aside class="io"><section class="panel input"><div class="panel-head"><span>▦ &nbsp; Input (stdin)</span><button class="pill-button" id="clearstdin" style="padding:6px 9px;font-size:11px">Clear</button></div><textarea class="stdin" id="stdin" placeholder="Input for scanf() or cin..."></textarea></section><section class="panel output"><div class="tabs"><button class="tab active" data-tab="output">Output</button><button class="tab" data-tab="errors">Errors</button><button class="tab" data-tab="terminal">Terminal</button><button class="pill-button tab-clear" id="clearout" style="padding:6px 9px;font-size:11px">Clear</button></div><pre class="outtext" id="out" aria-live="polite">Welcome to FundzyCompiler ✨&#10;&#10;Choose an example or write your own code.</pre><div id="css-wrap" hidden><div class="preview-label">LIVE CSS PREVIEW</div><iframe class="csspreview" id="preview" title="CSS preview" sandbox=""></iframe></div></section></aside></div>
+
+<div class="features" id="features"><article class="feature"><span class="feature-icon">ϟ</span><div><h3>Made to focus</h3><p>More space for code, less visual noise.</p></div></article><article class="feature"><span class="feature-icon" style="background:#101f45;color:#80a9ff">▱</span><div><h3>C, C++ & CSS</h3><p>Switch languages from one workspace.</p></div></article><article class="feature"><span class="feature-icon" style="background:#25194b;color:#c4b5fd">▯</span><div><h3>Mobile ready</h3><p>A layout that adapts to smaller screens.</p></div></article><article class="feature"><span class="feature-icon">✦</span><div><h3>Little wins</h3><p>A cheerful celebration after a demo run.</p></div></article></div></div></section>
+<section class="learn-section" id="learn"><div class="learn-heading"><p class="eyebrow">START HERE · NO EXPERIENCE NEEDED</p><h2>Learn what your code <span class="gradient">actually does.</span></h2><p>Pick a beginner-friendly concept. Read what it means, load a working example into the editor, and press Run Code.</p></div><div class="learn-grid">
+<article class="learn-card"><span class="learn-number">01 · OUTPUT</span><h3>Your first C program</h3><p><code>printf()</code> prints text to the screen. <code>
+</code> moves the cursor to a new line, and <code>main()</code> is where the program starts.</p><button class="learn-load" data-lang="c" data-example="hello">Try Hello World ↗</button></article>
+<article class="learn-card"><span class="learn-number">02 · INPUT + MATH</span><h3>Variables and addition</h3><p>Variables store values. <code>scanf()</code> reads numbers from the Input box; <code>&amp;a</code> tells C where to store the first number.</p><button class="learn-load" data-lang="c" data-example="sum">Try adding numbers ↗</button></article>
+<article class="learn-card"><span class="learn-number">03 · LOOPS</span><h3>Repeat work with a loop</h3><p>A <code>for</code> loop repeats instructions. This factorial example multiplies whole numbers from 1 through your input value.</p><button class="learn-load" data-lang="c" data-example="factorial">Try factorial ↗</button></article>
+<article class="learn-card"><span class="learn-number">04 · DECISIONS</span><h3>Check a prime number</h3><p>A prime number is greater than 1 and has no divisors other than 1 and itself. The program checks possible divisors.</p><button class="learn-load" data-lang="c" data-example="prime">Try prime checker ↗</button></article>
+<article class="learn-card"><span class="learn-number">05 · C++</span><h3>Output with C++</h3><p><code>cout</code> prints text in C++. <code>cin</code> reads input. This uses the C++ stream tools rather than C's <code>printf()</code> and <code>scanf()</code>.</p><button class="learn-load" data-lang="cpp" data-example="hello">Try C++ ↗</button></article>
+<article class="learn-card"><span class="learn-number">06 · STYLING</span><h3>CSS changes appearance</h3><p>CSS rules select elements and apply styles. Change a color, spacing, or border in the CSS editor and watch the preview update live.</p><button class="learn-load" data-lang="css" data-example="hello">Try CSS preview ↗</button></article>
+</div>
+<section class="line-guide" id="code-basics">
+  <div class="learn-heading"><p class="eyebrow">THE BASICS · EXPLAINED SIMPLY</p><h2>What does each line <span class="gradient">actually do?</span></h2><p>Start with these common lines. You do not need to memorize everything at once.</p></div>
+  <div class="line-guide-grid">
+    <article class="line-guide-card"><span class="learn-number">C LANGUAGE</span><h3><code>#include &lt;stdio.h&gt;</code></h3><p>Adds standard input/output tools, including <code>printf()</code> and <code>scanf()</code>.</p></article>
+    <article class="line-guide-card"><span class="learn-number">PROGRAM START</span><h3><code>int main(void)</code></h3><p>The main function is where a normal C program begins running.</p></article>
+    <article class="line-guide-card"><span class="learn-number">SHOW OUTPUT</span><h3><code>printf("Hello");</code></h3><p>Prints the text <em>Hello</em> to the program's output. In C, text is placed inside double quotes.</p></article>
+    <article class="line-guide-card"><span class="learn-number">FINISH</span><h3><code>return 0;</code></h3><p>Ends the main function and conventionally reports that the program finished successfully.</p></article>
+    <article class="line-guide-card"><span class="learn-number">C++ LANGUAGE</span><h3><code>#include &lt;iostream&gt;</code></h3><p>Provides C++ input/output tools such as <code>cout</code> and <code>cin</code>.</p></article>
+    <article class="line-guide-card"><span class="learn-number">READ INPUT</span><h3><code>cin &gt;&gt; age;</code></h3><p>Reads a value from the Input box and stores it in the variable named <code>age</code>.</p></article>
+  </div>
+</section>
+<p class="learn-tip"><strong>Quick tip:</strong> For the sum, factorial, Fibonacci, and prime examples, enter the input in the Input (stdin) box before pressing Run Code. Example: type <code>5</code> for factorial or <code>7</code> for prime.</p></section>
+<footer><span>✦ Fundzy Compiler</span><span>A focused place to learn and build.</span><span>Built by Srijan Gupta</span></footer></main>
+<div class="celebration" id="celebration" hidden role="status" aria-live="polite"><div class="celebration-card"><button class="close" id="close" aria-label="Close">×</button><div class="sparkle">✦</div><p class="kicker" id="celebration-kicker">RUN SUCCESSFUL</p><h2 id="celebration-title">NICE RUN! 🎉</h2><p id="celebration-message">Your program ran successfully. Keep learning, keep building.</p><div class="xp" id="celebration-xp">✨ &nbsp; +5 CODE XP · SESSION REWARD &nbsp; ✨</div><button class="continue" id="continue">Keep coding →</button></div><div class="confetti" id="confetti"></div></div>
+<script type="module" src="/src/main.js"></script>
+</body></html>
